@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone & HTML CSS Curriculum Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="header">
+    <div class="header-container">
+      <div class="brand">
+        <img class="logo" src="final-project/Icons/youtube-logo.svg" alt="YouTube Logo">
+        <div class="brand-text">
+          <span class="brand-title">HTML &amp; CSS Portfolio</span>
+          <span class="brand-badge">Learning Hub</span>
+        </div>
+      </div>
+
+      <div class="header-stats">
+        <div class="stat-item">
+          <span class="stat-number">15</span>
+          <span class="stat-label">Lessons</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">70+</span>
+          <span class="stat-label">Exercises</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Capstone Clone</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-pill">Modern Web Development Journey</span>
+        <h1 class="hero-title">YouTube Clone &amp; Frontend Mastery</h1>
+        <p class="hero-subtitle">
+          An interactive showcase of every lesson, exercise, and component built throughout the HTML &amp; CSS curriculum, culminating in a fully responsive, pixel-perfect YouTube homepage clone.
+        </p>
+
+        <!-- Search & Filter Controls -->
+        <div class="controls-container">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <input type="text" id="lessonSearch" placeholder="Search lessons by topic, tags, or concept (e.g., flexbox, grid, buttons)...">
+          </div>
+
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">All Lessons (16)</button>
+            <button class="filter-btn" data-filter="fundamentals">Fundamentals (1-5)</button>
+            <button class="filter-btn" data-filter="structure">Structure &amp; Inputs (6-10)</button>
+            <button class="filter-btn" data-filter="layouts">Grid &amp; Flexbox (11-13)</button>
+            <button class="filter-btn" data-filter="position">Positioning (14-15)</button>
+            <button class="filter-btn" data-filter="capstone">Capstone Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+
+    <!-- Featured Capstone Project Card -->
+    <section class="capstone-section" id="capstoneSection" data-category="capstone">
+      <div class="capstone-card">
+        <div class="capstone-badge">⭐ FEATURED CAPSTONE PROJECT</div>
+        <div class="capstone-grid">
+          <div class="capstone-preview">
+            <img class="capstone-thumb" src="final-project/thumbnail/thumbnail-1.webp" alt="YouTube Project Thumbnail">
+            <div class="capstone-play-overlay">
+              <span class="capstone-timestamp">FULL APP</span>
+            </div>
+          </div>
+          <div class="capstone-info">
+            <div class="capstone-header">
+              <h2 class="capstone-title">YouTube Homepage Clone</h2>
+              <span class="capstone-tag">Complete Responsive Replica</span>
+            </div>
+            <p class="capstone-desc">
+              The flagship culmination of all 15 lessons. A complete, production-grade YouTube desktop interface built from scratch with pure HTML &amp; CSS. Features fixed multi-tiered header navigation, voice search button, tooltip hover overlays, collapsible sidebar navigation icons, and a dynamic multi-column video grid complete with thumbnails, creator avatars, duration badges, and channel metadata.
+            </p>
+            <div class="tag-list">
+              <span class="tag">HTML5 Semantic Structure</span>
+              <span class="tag">CSS Grid Video Matrix</span>
+              <span class="tag">Flexbox Header &amp; Search</span>
+              <span class="tag">Fixed Sidebar &amp; Header</span>
+              <span class="tag">Absolute Badge Overlays</span>
+              <span class="tag">Pure CSS Tooltips</span>
+            </div>
+            <div class="capstone-actions">
+              <a href="final-project/youtube.html" target="_blank" class="btn-primary">
+                Launch YouTube Clone
+                <span class="arrow">&rarr;</span>
+              </a>
+              <span class="capstone-file-note">File: <code>final-project/youtube.html</code></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lessons Section Header -->
+    <div class="section-title-wrap">
+      <h2 class="section-title">Curriculum Lessons &amp; Exercises</h2>
+      <p class="section-subtitle">Browse each lesson card to review what was covered and launch individual exercise files.</p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid" id="cardsGrid">
+
+      <!-- Lesson 1 -->
+      <article class="card" data-category="fundamentals" data-keywords="html basics tags buttons paragraphs links website">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 01</div>
+          <span class="category-badge">Fundamentals</span>
+        </div>
+        <h3 class="card-title">HTML Basics</h3>
+        <p class="card-desc">
+          Introduces the core building blocks of web development. Explores essential HTML syntax, creating clickable buttons, structured paragraphs of text, and anchor links pointing to external websites.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">&lt;button&gt;</span>
+          <span class="concept-chip">&lt;p&gt;</span>
+          <span class="concept-chip">&lt;a&gt;</span>
+          <span class="concept-chip">target="_blank"</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson1/website.html" target="_blank" class="btn-card-primary">
+            Open Main Project
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson1/1a.html" target="_blank" class="pill">1a</a>
+              <a href="lesson1/1b.html" target="_blank" class="pill">1b</a>
+              <a href="lesson1/1c.html" target="_blank" class="pill">1c</a>
+              <a href="lesson1/1d.html" target="_blank" class="pill">1d</a>
+              <a href="lesson1/1e.html" target="_blank" class="pill">1e</a>
+              <a href="lesson1/1f.html" target="_blank" class="pill">1f</a>
+              <a href="lesson1/1g.html" target="_blank" class="pill">1g</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 2 -->
+      <article class="card" data-category="fundamentals" data-keywords="css basics buttons style colors borders uber amazon twitter button">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 02</div>
+          <span class="category-badge">Fundamentals</span>
+        </div>
+        <h3 class="card-title">CSS Basics &amp; Button Styling</h3>
+        <p class="card-desc">
+          First steps with Cascading Style Sheets. Focuses on styling custom HTML buttons using class selectors, setting background colors, border styles, text colors, and replicating real-world Uber, Amazon, and Twitter buttons.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">background-color</span>
+          <span class="concept-chip">border-radius</span>
+          <span class="concept-chip">cursor: pointer</span>
+          <span class="concept-chip">width &amp; height</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson2/button.html" target="_blank" class="btn-card-primary">
+            Open Main Project
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson2/2a.html" target="_blank" class="pill">2a</a>
+              <a href="lesson2/2b.html" target="_blank" class="pill">2b</a>
+              <a href="lesson2/2c.html" target="_blank" class="pill">2c</a>
+              <a href="lesson2/2d.html" target="_blank" class="pill">2d</a>
+              <a href="lesson2/2e.html" target="_blank" class="pill">2e</a>
+              <a href="lesson2/2f.html" target="_blank" class="pill">2f</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 3 -->
+      <article class="card" data-category="fundamentals" data-keywords="hover active transitions pseudo classes animation shadows buttons">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 03</div>
+          <span class="category-badge">Fundamentals</span>
+        </div>
+        <h3 class="card-title">Hovers, Transitions &amp; Shadows</h3>
+        <p class="card-desc">
+          Adds dynamic user interactivity to elements using CSS pseudo-classes. Implements smooth hover states with CSS transitions, click response with active states, opacity shifts, and realistic elevation shadows.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">:hover</span>
+          <span class="concept-chip">:active</span>
+          <span class="concept-chip">transition</span>
+          <span class="concept-chip">box-shadow</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson3/button.html" target="_blank" class="btn-card-primary">
+            Open Main Project
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson3/3a.html" target="_blank" class="pill">3a</a>
+              <a href="lesson3/3b.html" target="_blank" class="pill">3b</a>
+              <a href="lesson3/3c.html" target="_blank" class="pill">3c</a>
+              <a href="lesson3/3d.html" target="_blank" class="pill">3d</a>
+              <a href="lesson3/3e.html" target="_blank" class="pill">3e</a>
+              <a href="lesson3/3f.html" target="_blank" class="pill">3f</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 4 -->
+      <article class="card" data-category="fundamentals" data-keywords="chrome devtools css box model padding margin border spacing">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 04</div>
+          <span class="category-badge">Fundamentals</span>
+        </div>
+        <h3 class="card-title">Chrome DevTools &amp; Box Model</h3>
+        <p class="card-desc">
+          Deep dive into the CSS Box Model—understanding how content, padding, border, and margin combine. Utilizes browser DevTools to inspect element dimensions, debug layout spacing, and calculate accurate sizes.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">margin</span>
+          <span class="concept-chip">padding</span>
+          <span class="concept-chip">border</span>
+          <span class="concept-chip">DevTools Inspect</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson4/cssboxmodel.html" target="_blank" class="btn-card-primary">
+            Open Main Project
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson4/4a.html" target="_blank" class="pill">4a</a>
+              <a href="lesson4/4b.html" target="_blank" class="pill">4b</a>
+              <a href="lesson4/4c.html" target="_blank" class="pill">4c</a>
+              <a href="lesson4/4d.html" target="_blank" class="pill">4d</a>
+              <a href="lesson4/4e.html" target="_blank" class="pill">4e</a>
+              <a href="lesson4/4f.html" target="_blank" class="pill">4f</a>
+              <a href="lesson4/4g.html" target="_blank" class="pill">4g</a>
+              <a href="lesson4/4h.html" target="_blank" class="pill">4h</a>
+              <a href="lesson4/4i.html" target="_blank" class="pill">4i</a>
+              <a href="lesson4/4j.html" target="_blank" class="pill">4j</a>
+              <a href="lesson4/4k.html" target="_blank" class="pill">4k</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 5 -->
+      <article class="card" data-category="fundamentals" data-keywords="text styles typography fonts font-size font-weight video title metadata">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 05</div>
+          <span class="category-badge">Fundamentals</span>
+        </div>
+        <h3 class="card-title">Text Styles &amp; Typography</h3>
+        <p class="card-desc">
+          Mastering typography and readability. Covers font weights, sizes, line heights, font families, and color contrast. Replicates realistic YouTube video titles, author verified badges, view stats, and Apple promo banners.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">font-size</span>
+          <span class="concept-chip">font-weight</span>
+          <span class="concept-chip">line-height</span>
+          <span class="concept-chip">color hierarchy</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson5/text-style.html" target="_blank" class="btn-card-primary">
+            Open Main Project
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson5/5a.html" target="_blank" class="pill">5a</a>
+              <a href="lesson5/5b.html" target="_blank" class="pill">5b</a>
+              <a href="lesson5/5c.html" target="_blank" class="pill">5c</a>
+              <a href="lesson5/5d.html" target="_blank" class="pill">5d</a>
+              <a href="lesson5/5e.html" target="_blank" class="pill">5e</a>
+              <a href="lesson5/5f.html" target="_blank" class="pill">5f</a>
+              <a href="lesson5/5g.html" target="_blank" class="pill">5g</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 6 -->
+      <article class="card" data-category="structure" data-keywords="html structure doctype head meta external css google fonts tesla">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 06</div>
+          <span class="category-badge">Structure</span>
+        </div>
+        <h3 class="card-title">HTML Structure &amp; External CSS</h3>
+        <p class="card-desc">
+          Transitioning to professional code architecture. Employs complete HTML5 document boilerplate, head metadata, title elements, external CSS files, and imports web fonts like Montserrat and Roboto from Google Fonts.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">&lt;!DOCTYPE html&gt;</span>
+          <span class="concept-chip">&lt;head&gt; &amp; &lt;link&gt;</span>
+          <span class="concept-chip">Google Fonts</span>
+          <span class="concept-chip">External Stylesheet</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson6/6d.html" target="_blank" class="btn-card-primary">
+            Open Main Project (Tesla)
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson6/6a.html" target="_blank" class="pill">6a</a>
+              <a href="lesson6/6b.html" target="_blank" class="pill">6b</a>
+              <a href="lesson6/6c.html" target="_blank" class="pill">6c</a>
+              <a href="lesson6/6d.html" target="_blank" class="pill">6d</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 7 -->
+      <article class="card" data-category="structure" data-keywords="images text boxes input avatar border-radius search tweet">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 07</div>
+          <span class="category-badge">Structure &amp; Inputs</span>
+        </div>
+        <h3 class="card-title">Images &amp; Text Boxes</h3>
+        <p class="card-desc">
+          Working with multimedia and user inputs. Embedding images with `&lt;img&gt;`, sizing and cropping avatars with `object-fit`, creating rounded avatar profile pictures, and building Twitter-style compose boxes.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">&lt;img&gt;</span>
+          <span class="concept-chip">&lt;input type="text"&gt;</span>
+          <span class="concept-chip">border-radius: 50%</span>
+          <span class="concept-chip">placeholder</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson7/7g.html" target="_blank" class="btn-card-primary">
+            Open Main Project (Tweet)
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson7/7a.html" target="_blank" class="pill">7a</a>
+              <a href="lesson7/7b.html" target="_blank" class="pill">7b</a>
+              <a href="lesson7/7c.html" target="_blank" class="pill">7c</a>
+              <a href="lesson7/7d.html" target="_blank" class="pill">7d</a>
+              <a href="lesson7/7e.html" target="_blank" class="pill">7e</a>
+              <a href="lesson7/7f.html" target="_blank" class="pill">7f</a>
+              <a href="lesson7/7g.html" target="_blank" class="pill">7g</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 8 -->
+      <article class="card" data-category="structure" data-keywords="display property inline block inline-block forms uber search">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 08</div>
+          <span class="category-badge">Structure &amp; Flow</span>
+        </div>
+        <h3 class="card-title">CSS Display Property</h3>
+        <p class="card-desc">
+          Understanding browser document flow. Compares inline, block, and inline-block element behaviors to control layout line-breaks and element dimensions. Implements a multi-field Uber ride pickup form.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">display: block</span>
+          <span class="concept-chip">display: inline</span>
+          <span class="concept-chip">display: inline-block</span>
+          <span class="concept-chip">form inputs</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson8/8e.html" target="_blank" class="btn-card-primary">
+            Open Main Project (Uber)
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson8/8a.html" target="_blank" class="pill">8a</a>
+              <a href="lesson8/8b.html" target="_blank" class="pill">8b</a>
+              <a href="lesson8/8c.html" target="_blank" class="pill">8c</a>
+              <a href="lesson8/8d.html" target="_blank" class="pill">8d</a>
+              <a href="lesson8/8e.html" target="_blank" class="pill">8e</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 9 -->
+      <article class="card" data-category="structure" data-keywords="div element container card wrapping google search layout">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 09</div>
+          <span class="category-badge">Components</span>
+        </div>
+        <h3 class="card-title">The Div Element &amp; Containers</h3>
+        <p class="card-desc">
+          The foundation of web modularity. Utilizing `&lt;div&gt;` containers to group related elements together into cohesive UI components. Builds Google Search card components, profile widgets, and shadow boxes.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">&lt;div&gt;</span>
+          <span class="concept-chip">container layout</span>
+          <span class="concept-chip">box shadows</span>
+          <span class="concept-chip">card encapsulation</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson9/9h.html" target="_blank" class="btn-card-primary">
+            Open Main Project (Google)
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson9/9a.html" target="_blank" class="pill">9a</a>
+              <a href="lesson9/9b.html" target="_blank" class="pill">9b</a>
+              <a href="lesson9/9c.html" target="_blank" class="pill">9c</a>
+              <a href="lesson9/9d.html" target="_blank" class="pill">9d</a>
+              <a href="lesson9/9e.html" target="_blank" class="pill">9e</a>
+              <a href="lesson9/9f.html" target="_blank" class="pill">9f</a>
+              <a href="lesson9/9g.html" target="_blank" class="pill">9g</a>
+              <a href="lesson9/9h.html" target="_blank" class="pill">9h</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 10 -->
+      <article class="card" data-category="structure" data-keywords="nested layouts practice profile card add friend mutual friends facebook">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 10</div>
+          <span class="category-badge">Components</span>
+        </div>
+        <h3 class="card-title">Nested Layouts Practice</h3>
+        <p class="card-desc">
+          Synthesizing earlier principles into complex nested cards. Builds social media friend recommendation cards featuring nested avatar rows, mutual friend counts, action buttons, and aligned typography.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">nested divs</span>
+          <span class="concept-chip">row &amp; column flow</span>
+          <span class="concept-chip">card architecture</span>
+          <span class="concept-chip">modular styles</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson10/10e.html" target="_blank" class="btn-card-primary">
+            Open Friend Card Project
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson10/10e.html" target="_blank" class="pill">10e Component</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 11 -->
+      <article class="card" data-category="layouts" data-keywords="css grid grid-template-columns fr units gap multi column layout">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 11</div>
+          <span class="category-badge">Layouts &amp; Grid</span>
+        </div>
+        <h3 class="card-title">CSS Grid Mastery</h3>
+        <p class="card-desc">
+          Modern two-dimensional layout orchestration. Establishes multi-column grids using `grid-template-columns`, flexible fractional units (`fr`), and column/row spacing (`gap`) to format responsive video catalog matrices.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">display: grid</span>
+          <span class="concept-chip">grid-template-columns</span>
+          <span class="concept-chip">1fr unit</span>
+          <span class="concept-chip">gap &amp; row-gap</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson11/grid.html" target="_blank" class="btn-card-primary">
+            Open Grid Showcase
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson11/11a.html" target="_blank" class="pill">11a</a>
+              <a href="lesson11/11b.html" target="_blank" class="pill">11b</a>
+              <a href="lesson11/11c.html" target="_blank" class="pill">11c</a>
+              <a href="lesson11/11d.html" target="_blank" class="pill">11d</a>
+              <a href="lesson11/grid.html" target="_blank" class="pill">grid</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 12 -->
+      <article class="card" data-category="layouts" data-keywords="css flexbox display flex justify-content align-items flex-direction flex 1">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 12</div>
+          <span class="category-badge">Layouts &amp; Flexbox</span>
+        </div>
+        <h3 class="card-title">CSS Flexbox Foundations</h3>
+        <p class="card-desc">
+          Comprehensive exploration of one-dimensional flexible box layout. Learns to align items along main and cross axes using `justify-content`, `align-items`, dynamic column stretching with `flex: 1`, and directional flow.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">display: flex</span>
+          <span class="concept-chip">justify-content</span>
+          <span class="concept-chip">align-items</span>
+          <span class="concept-chip">flex: 1</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson12/flexbox.html" target="_blank" class="btn-card-primary">
+            Open Flexbox Showcase
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson12/12a.html" target="_blank" class="pill">12a</a>
+              <a href="lesson12/12b.html" target="_blank" class="pill">12b</a>
+              <a href="lesson12/12c.html" target="_blank" class="pill">12c</a>
+              <a href="lesson12/12d.html" target="_blank" class="pill">12d</a>
+              <a href="lesson12/12e.html" target="_blank" class="pill">12e</a>
+              <a href="lesson12/12f.html" target="_blank" class="pill">12f</a>
+              <a href="lesson12/12g.html" target="_blank" class="pill">12g</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 13 -->
+      <article class="card" data-category="layouts" data-keywords="nested flexbox navigation bars header alignment twitter post tweet">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 13</div>
+          <span class="category-badge">Layouts &amp; Flexbox</span>
+        </div>
+        <h3 class="card-title">Nested Flexbox &amp; Navigation</h3>
+        <p class="card-desc">
+          Advanced Flexbox patterns: nesting flex rows inside flex columns. Powers complex components like full Twitter tweet feeds with avatar columns, nested content, and YouTube three-section headers (left, middle, right).
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">nested flex containers</span>
+          <span class="concept-chip">header alignment</span>
+          <span class="concept-chip">flex-direction: column</span>
+          <span class="concept-chip">space-between</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson13/13g.html" target="_blank" class="btn-card-primary">
+            Open Tweet Feed Component
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson13/13a.html" target="_blank" class="pill">13a</a>
+              <a href="lesson13/13b.html" target="_blank" class="pill">13b</a>
+              <a href="lesson13/13d.html" target="_blank" class="pill">13d</a>
+              <a href="lesson13/13e.html" target="_blank" class="pill">13e</a>
+              <a href="lesson13/13g.html" target="_blank" class="pill">13g</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 14 -->
+      <article class="card" data-category="position" data-keywords="css position fixed header sidebar scroll coordinate offset z-index">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 14</div>
+          <span class="category-badge">Positioning</span>
+        </div>
+        <h3 class="card-title">CSS Position: Fixed &amp; Sticky</h3>
+        <p class="card-desc">
+          Unlocks the CSS Position property. Explores `position: fixed` to pin navigation headers to the top and sidebars to the left viewport edges, maintaining visibility while page content scrolls behind.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">position: fixed</span>
+          <span class="concept-chip">top / left / right</span>
+          <span class="concept-chip">z-index stacking</span>
+          <span class="concept-chip">padding offset</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson14/position.html" target="_blank" class="btn-card-primary">
+            Open Fixed Layout Showcase
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson14/14a.html" target="_blank" class="pill">14a</a>
+              <a href="lesson14/14b.html" target="_blank" class="pill">14b</a>
+              <a href="lesson14/14c.html" target="_blank" class="pill">14c</a>
+              <a href="lesson14/14d.html" target="_blank" class="pill">14d</a>
+              <a href="lesson14/14e.html" target="_blank" class="pill">14e</a>
+              <a href="lesson14/14f.html" target="_blank" class="pill">14f</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lesson 15 -->
+      <article class="card" data-category="position" data-keywords="position absolute relative video timestamp badges overlays close button tooltips">
+        <div class="card-header">
+          <div class="card-lesson-num">LESSON 15</div>
+          <span class="category-badge">Positioning</span>
+        </div>
+        <h3 class="card-title">Absolute &amp; Relative Coordinates</h3>
+        <p class="card-desc">
+          Precision component overlays. Combines `position: relative` on parents with `position: absolute` on children to render YouTube video duration timestamps, discount badges, modal close buttons, and tooltips.
+        </p>
+        <div class="card-concepts">
+          <span class="concept-chip">position: relative</span>
+          <span class="concept-chip">position: absolute</span>
+          <span class="concept-chip">timestamp overlay</span>
+          <span class="concept-chip">hover tooltips</span>
+        </div>
+        <div class="card-footer">
+          <a href="lesson15/position.html" target="_blank" class="btn-card-primary">
+            Open Badges Showcase
+            <span class="arrow">&rarr;</span>
+          </a>
+          <div class="exercise-links">
+            <span class="exercise-label">Exercises:</span>
+            <div class="pill-group">
+              <a href="lesson15/15a.html" target="_blank" class="pill">15a</a>
+              <a href="lesson15/15b.html" target="_blank" class="pill">15b</a>
+              <a href="lesson15/15c.html" target="_blank" class="pill">15c</a>
+              <a href="lesson15/15d.html" target="_blank" class="pill">15d</a>
+              <a href="lesson15/15e.html" target="_blank" class="pill">15e</a>
+              <a href="lesson15/15f.html" target="_blank" class="pill">15f</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img class="footer-logo" src="final-project/Icons/youtube-logo.svg" alt="YouTube Logo">
+        <p class="footer-text">
+          YouTube Clone &amp; HTML CSS Course Project &bull; Created with pure HTML5 &amp; CSS3
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="#capstoneSection" class="footer-link">Capstone Project</a>
+        <a href="final-project/youtube.html" target="_blank" class="footer-link">Launch YouTube</a>
+        <a href="#" class="footer-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top &uarr;</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Realist. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Interactive Filtering & Search Script -->
+  <script>
+    const searchInput = document.getElementById('lessonSearch');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+    const capstoneSection = document.getElementById('capstoneSection');
+
+    let currentFilter = 'all';
+
+    function filterContent() {
+      const query = searchInput.value.toLowerCase().trim();
+
+      cards.forEach(card => {
+        const category = card.dataset.category;
+        const keywords = (card.dataset.keywords || '').toLowerCase();
+        const textContent = card.innerText.toLowerCase();
+
+        const matchesCategory = currentFilter === 'all' || category === currentFilter;
+        const matchesQuery = !query || keywords.includes(query) || textContent.includes(query);
+
+        if (matchesCategory && matchesQuery) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Handle Capstone Visibility
+      if (currentFilter === 'capstone') {
+        capstoneSection.style.display = 'block';
+      } else if (currentFilter !== 'all' && currentFilter !== 'capstone') {
+        capstoneSection.style.display = 'none';
+      } else {
+        // 'all'
+        const matchesQuery = !query || 'youtube capstone final clone responsive'.includes(query);
+        capstoneSection.style.display = matchesQuery ? 'block' : 'none';
+      }
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        filterContent();
+      });
+    });
+
+    searchInput.addEventListener('input', filterContent);
+  </script>
+</body>
+</html>
